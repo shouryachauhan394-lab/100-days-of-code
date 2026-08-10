@@ -1,0 +1,21 @@
+//Write a program to input two numbers and display their sum.
+#include <stdio.h>
+void main()
+{
+int a,b,c;
+printf("Enter the value of a & b");
+scanf("%d%d",&a,&b);
+c=a+b;
+printf("The sum is %d",c);}
+Sample test 1:
+Enter the value of a & b3 4
+The sum is 7
+Process returned 12 (0xC)   execution time : 2.781 s
+Press any key to continue.
+
+
+Sample test 2:
+Enter the value of a & b-1 20
+The sum is 19
+Process returned 13 (0xD)   execution time : 12.189 s
+Press any key to continue.
