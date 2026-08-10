@@ -1,0 +1,41 @@
+Q2: Write a program to input two numbers and display their sum, difference, product, and quotient.
+
+/*
+Sample Test Cases:
+Input 1:
+10 2
+Output 1:
+Sum=12, Diff=8, Product=20, Quotient=5
+
+Input 2:
+7 3
+Output 2:
+Sum=10, Diff=4, Product=21, Quotient=2
+
+*/
+
+Code:
+#include <stdio.h>
+int main()
+{int a,b,s,d,p,q;
+printf("Enter two numbers: ");
+scanf("%d%d",&a,&b);
+s=a+b;
+p=a*b;
+d=a-b;
+q=a/b;
+printf("The sum is %d",s);
+printf("  The product is %d",p);
+printf("  The difference is %d",d);
+printf("  The quotient is %d",q);
+}
+Sample test 1:
+Enter two numbers: 10 2
+The sum is 12  The product is 20  The difference is 8  The quotient is 5
+Process returned 0 (0x0)   execution time : 1.592 s
+Press any key to continue.
+Sample test 2:
+Enter two numbers: 7 3
+The sum is 10  The product is 21  The difference is 4  The quotient is 2
+Process returned 0 (0x0)   execution time : 10.095 s
+Press any key to continue.
