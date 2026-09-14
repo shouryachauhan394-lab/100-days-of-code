@@ -1,0 +1,56 @@
+//Q31 Write a program to take a number as input and print its equivalent binary representation.
+#include <stdio.h>
+
+int main() {
+    int n, binary[32], i = 0, j;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n == 0) {
+        printf("Binary = 0\n");
+    } else {
+        while (n > 0) {
+            binary[i] = n % 2;
+            n = n / 2;
+            i++;
+        }
+
+        printf("Binary = ");
+        for (j = i - 1; j >= 0; j--) {
+            printf("%d", binary[j]);
+        }
+        printf("\n");
+    }
+
+    getchar();
+    getchar();
+    return 0;
+}
+//Q32 Write a program to check if a number is a palindrome.
+#include <stdio.h>
+
+int main() {
+    int n, original, digit, reverse = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    original = n;
+
+    while (n != 0) {
+        digit = n % 10;
+        reverse = reverse * 10 + digit;
+        n = n / 10;
+    }
+
+    if (original == reverse) {
+        printf("%d is a palindrome\n", original);
+    } else {
+        printf("%d is not a palindrome\n", original);
+    }
+
+    getchar();
+    getchar();
+    return 0;
+}
