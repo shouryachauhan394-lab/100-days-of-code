@@ -1,0 +1,36 @@
+//Q120 Write a program to take a string input. Change it to sentence case.
+
+
+#include <stdio.h>
+
+int main() {
+    char str[1000];
+    int i, capitalizeNext = 1;
+
+    str[0] = '\0';
+
+    printf("Enter a string: ");
+    scanf("%[^\n]s", str);
+
+    for (i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            if (capitalizeNext == 1) {
+                str[i] = str[i] - 'a' + 'A';
+            }
+            capitalizeNext = 0;
+        } else if (str[i] >= 'A' && str[i] <= 'Z') {
+            if (capitalizeNext == 0) {
+                str[i] = str[i] - 'A' + 'a';
+            }
+            capitalizeNext = 0;
+        } else if (str[i] == '.' || str[i] == '!' || str[i] == '?') {
+            capitalizeNext = 1;
+        }
+    }
+
+    printf("%s\n", str);
+
+    getchar();
+    getchar();
+    return 0;
+}
