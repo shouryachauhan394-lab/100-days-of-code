@@ -1,0 +1,48 @@
+//Q133 Create an enum for months and print how many days each month has.
+
+
+#include <stdio.h>
+
+enum Month {
+    JANUARY = 1,
+    FEBRUARY,
+    MARCH,
+    APRIL,
+    MAY,
+    JUNE,
+    JULY,
+    AUGUST,
+    SEPTEMBER,
+    OCTOBER,
+    NOVEMBER,
+    DECEMBER
+};
+
+int main() {
+    char *names[] = {"", "JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+                     "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"};
+    int m, days;
+
+    printf("%-12s %s\n", "Month", "Days");
+    printf("--------------------\n");
+
+    for (m = JANUARY; m <= DECEMBER; m++) {
+        switch (m) {
+            case FEBRUARY:
+                days = 28;
+                break;
+            case APRIL:
+            case JUNE:
+            case SEPTEMBER:
+            case NOVEMBER:
+                days = 30;
+                break;
+            default:
+                days = 31;
+        }
+        printf("%-12s %d\n", names[m], days);
+    }
+
+    getchar();
+    return 0;
+}
