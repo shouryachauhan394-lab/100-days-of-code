@@ -1,0 +1,31 @@
+//Q138 Print all enum names and integer values using a loop.
+
+
+#include <stdio.h>
+
+enum Day {
+    SUNDAY,
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY,
+    THURSDAY,
+    FRIDAY,
+    SATURDAY,
+    DAY_COUNT
+};
+
+int main() {
+    char *names[] = {"SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY",
+                     "THURSDAY", "FRIDAY", "SATURDAY"};
+    int d;
+
+    printf("%-12s %s\n", "Name", "Value");
+    printf("--------------------\n");
+
+    for (d = 0; d < DAY_COUNT; d++) {
+        printf("%-12s %d\n", names[d], d);
+    }
+
+    getchar();
+    return 0;
+}
